@@ -19,6 +19,8 @@ public class Futo {
 
     @Column(nullable = false)
     private boolean nem;
+    //false = ferfi
+    //true = no
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

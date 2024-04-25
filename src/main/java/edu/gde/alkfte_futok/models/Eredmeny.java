@@ -1,6 +1,7 @@
 package edu.gde.alkfte_futok.models;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.DecimalMin;
 import lombok.*;
 
 @Entity
@@ -14,6 +15,8 @@ public class Eredmeny {
     @JoinColumn(name = "futoId")
     private Futo futo;
 
+    @DecimalMin(value = "0.0")
+    private double ido;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
