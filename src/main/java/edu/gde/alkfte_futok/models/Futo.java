@@ -26,6 +26,6 @@ public class Futo {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long futoId;
 
-    @OneToMany(mappedBy = "futo")
-    private Set<Eredmeny> eredmenyek;
+    //@OneToMany(mappedBy = "futo")
+    //private Set<Eredmeny> eredmenyek;
 }

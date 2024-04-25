@@ -16,8 +16,6 @@ import java.util.List;
 public class FutoCtrl {
     @Autowired
     private FutoRepo futoRepo;
-    @Autowired
-    private EredmenyRepo eredmenyRepo;
 
     @GetMapping("/getRunners")
     public List<Futo> getRunners() {return futoRepo.findAll();}
