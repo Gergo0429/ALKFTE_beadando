@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/slate/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Races</title>
+</head>
+<body>
+<div class="container">
+    <h1>Races</h1>
+    <hr>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Length(km)</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="verseny : ${versenyek}">
+            <td th:text="${verseny.versenyId}"></td>
+            <td th:text="${verseny.nev}"></td>
+            <td th:text="${verseny.tav}"></td>
+            <td>
+                <a th:href="@{/verseny/{id}(id=${verseny.versenyId})}" class="btn btn-primary">View</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="/newRace.html" class="btn btn-primary">Add New Race</a>
+</div>
+</body>
+</html>
