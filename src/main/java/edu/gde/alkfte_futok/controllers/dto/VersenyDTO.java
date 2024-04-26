@@ -3,6 +3,8 @@ package edu.gde.alkfte_futok.controllers.dto;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,11 +15,9 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class VersenyDTO implements Serializable {
-    @Column(nullable = false, length = 50)
+    @NotNull
     private String nev;
 
-    @Column(nullable = false)
-    @DecimalMin("0.05")
-    @Max(value = 42)
+    @Positive
     private Double tav;
 }

@@ -70,7 +70,7 @@ public class VersenyCtrl {
 
     @PostMapping("/updateRace/{ID}")
     public ResponseEntity<Verseny> updateRace(@PathVariable long ID, @RequestBody @Valid VersenyDTO versenyDto) {
-        if (versenyRepo.existsById(ID)) {
+        if (versenyRepo.existsById(ID) && versenyDto.getTav()>0) {
             Verseny verseny = versenyRepo.findById(ID).get();
             verseny.setNev(versenyDto.getNev());
             verseny.setTav(versenyDto.getTav());

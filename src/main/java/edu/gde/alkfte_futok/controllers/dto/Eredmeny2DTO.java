@@ -8,14 +8,17 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-//getRaceRunners válaszhoz
+//addResult kéréshez
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EredmenyDTO implements Serializable {
+public class Eredmeny2DTO implements Serializable {
     @NotNull
-    private String nev;
+    private long futoID;
+
+    @NotNull
+    private long versenyID;
 
     @Positive
     private double ido;
