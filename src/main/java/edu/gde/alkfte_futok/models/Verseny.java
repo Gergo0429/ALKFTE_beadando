@@ -20,7 +20,4 @@ public class Verseny {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long versenyId;
-
-    //@OneToMany(mappedBy = "verseny")
-    //private Set<Eredmeny> eredmenyek;
 }
