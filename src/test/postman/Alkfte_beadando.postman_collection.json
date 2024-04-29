@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "1e8bf774-0659-4fac-b9ef-dadc161bb37e",
+		"name": "Alkfte_beadando",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14689156"
+	},
+	"item": [
+		{
+			"name": "getRunners",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/getRunners"
+			},
+			"response": []
+		},
+		{
+			"name": "addRunner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nev\": \"Ujfuto Neve\",\r\n    \"kor\": 23,\r\n    \"nem\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/addRunner"
+			},
+			"response": []
+		},
+		{
+			"name": "getRaceRunners/{ID}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/getRaceRunners/1"
+			},
+			"response": []
+		},
+		{
+			"name": "updateRace",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"versenyId\": 1,\r\n    \"nev\": \"Gyors sprint\",\r\n    \"tav\": 0.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/updateRace"
+			},
+			"response": []
+		},
+		{
+			"name": "updateRace 404",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"versenyId\": 5,\r\n    \"nev\": \"Gyors sprint\",\r\n    \"tav\": 0.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/updateRace"
+			},
+			"response": []
+		},
+		{
+			"name": "addResult",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"futoID\": 4,\r\n    \"versenyID\": 1,\r\n    \"ido\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/addResult"
+			},
+			"response": []
+		},
+		{
+			"name": "addResult 400",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"futoID\": 9,\r\n    \"versenyID\": 1,\r\n    \"ido\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/addResult"
+			},
+			"response": []
+		},
+		{
+			"name": "getAverageTime",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/getAverageTime/1"
+			},
+			"response": []
+		},
+		{
+			"name": "getAverageTime 400",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/getAverageTime/8"
+			},
+			"response": []
+		}
+	]
+}

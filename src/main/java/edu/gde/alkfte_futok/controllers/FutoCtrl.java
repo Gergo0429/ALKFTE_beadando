@@ -2,7 +2,6 @@ package edu.gde.alkfte_futok.controllers;
 
 import edu.gde.alkfte_futok.controllers.dto.FutoDTO;
 import edu.gde.alkfte_futok.models.Futo;
-import edu.gde.alkfte_futok.repositories.EredmenyRepo;
 import edu.gde.alkfte_futok.repositories.FutoRepo;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -68,12 +68,14 @@ public class VersenyCtrl {
         }
     }
 
-    @PostMapping("/updateRace/{ID}")
-    public ResponseEntity<Verseny> updateRace(@PathVariable long ID, @RequestBody @Valid VersenyDTO versenyDto) {
-        if (versenyRepo.existsById(ID) && versenyDto.getTav()>0) {
-            Verseny verseny = versenyRepo.findById(ID).get();
-            verseny.setNev(versenyDto.getNev());
-            verseny.setTav(versenyDto.getTav());
+    @PostMapping("/updateRace")
+    public ResponseEntity<Verseny> updateRace(@RequestBody @Valid Verseny ujVerseny) {
+        if (versenyRepo.existsById(ujVerseny.getVersenyId()) && ujVerseny.getTav()>0) {
+            Verseny verseny = versenyRepo.findById(ujVerseny.getVersenyId()).get();
+            verseny.setNev(ujVerseny.getNev());
+            verseny.setTav(ujVerseny.getTav());
+
+            versenyRepo.save(verseny);
 
             return ResponseEntity.ok(verseny);
         }
