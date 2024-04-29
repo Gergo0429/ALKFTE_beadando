@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/slate/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+<div class="container">
+    <h1 th:text="${eredmenyek[0].verseny.nev}"></h1>
+    <hr>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Time(min)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="eredmeny : ${eredmenyek}">
+            <td th:text="${eredmeny.futo.nev}"></td>
+            <td th:text="${eredmeny.ido}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="/viewRaces" class="btn btn-primary">Back</a>
+</div>
+</body>
+</html>

@@ -75,19 +75,19 @@ public class AlapadatBetolto implements CommandLineRunner {
         Eredmeny eredmeny1 = new Eredmeny();
         eredmeny1.setVerseny(verseny1);
         eredmeny1.setFuto(futo1);
-        eredmeny1.setIdo(10.0);
+        eredmeny1.setIdo(0.16);
         eredmenyRepo.save(eredmeny1);
 
         Eredmeny eredmeny2 = new Eredmeny();
         eredmeny2.setVerseny(verseny1);
         eredmeny2.setFuto(futo2);
-        eredmeny2.setIdo(12.3);
+        eredmeny2.setIdo(0.2);
         eredmenyRepo.save(eredmeny2);
 
         Eredmeny eredmeny3 = new Eredmeny();
         eredmeny3.setVerseny(verseny1);
         eredmeny3.setFuto(futo3);
-        eredmeny3.setIdo(15.8);
+        eredmeny3.setIdo(0.26);
         eredmenyRepo.save(eredmeny3);
 
         Eredmeny eredmeny4 = new Eredmeny();
